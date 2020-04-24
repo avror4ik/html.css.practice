@@ -13,6 +13,10 @@ body {
   "footer footer footer";
   row-gap: 30px;
   margin-top: 30px;
+  padding: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #fafafa;
   }
 
 .page-title{
@@ -38,19 +42,22 @@ body {
 
   #pageHeader {
   grid-area: header;
+  
+  
   }
-
-    #headerInnerGrid {
-      display: grid;
-      grid-template-columns: 1fr  1fr;
-      grid-template-rows: 35px;
-      grid-gap: 30px;
-      align-items: center;
-      justify-self: end;
-      }
+  .headerInnerGrid {
+    display: flex;
+    justify-content: space-between;
     
+    }
+  
+
     .header-menu{
-      min-width: 550px;
+      min-width: 400px;
+      
+      display: block;
+      padding-top: 6px;
+      
     }
 
     .header-menu_link{
@@ -117,27 +124,21 @@ body {
 
   #mainCatalog {
   grid-area: catalog;
-  
-  
+  background-color: #fafafa;
   }
 
 .main-catalog  {
   border-bottom: 1px solid slategrey;
   border-top: 1px solid slategrey;
-  
-  
-  
-  
   list-style: none;
   height: 58px;
   
 }
 .main-catalog_list {
   height: 50px;
-  
   width: 60%;
   min-width: 550px;
-  padding-top: 20px;
+  padding-top: 16px;
   margin: 0 auto;
   
 }
@@ -170,80 +171,122 @@ body {
   grid-area: content;
   }
 
-  #pageFooter {
-    grid-area: footer;
-    }
+  .mainContent{
+    flex-direction: row;
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;   
+}
 
+.mainContent-wrap{
+  display:inline-flex; 
+  width:32%;
+  height: auto;
+}
+
+.mainContent-column{ 
+    flex-direction: column;
+    display: flex;   
+}
+
+.mainContent-column_box{
+  display:block;  
+  width:100%;
+  margin-bottom: 15px; 
+}
+.mainContent-column_img{
+  display:block;
+   width:100%;
+}
+.mainContent-column__button-load{
+  display:block;
+  width: 125px;
+  height: 30px;
+  background-color: #959595; 
+  border-radius: 2px;
+  margin: 0 auto;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
   
-    footer {
-  
-      background: gold;
-      }
-
-  #catalogInnerGrid {
-      display: grid;
-      grid-template-columns: 2fr 2fr 2fr;
-      grid-template-rows: 35px;
-      grid-gap: 35px;
-      }
-  
-      #catalogInnerGrid > div {
-      background: lightgreen;
-      padding: 8px;
-      }
-      
-/*body {
-  font-family: sans-serif;
-  box-sizing: border-box;
-}
-.container {
-  display: grid;
-  grid-template-columns: 0.5fr 5fr 0.5fr;
-  grid-template-rows: 90px 650px auto 300px;
-  grid-template-areas: 
-  ". header ."
-  "slider slider slider"
-  ". content ."
-  "footer footer footer"
-  ;
-  row-gap: 20px;
 }
 
-.header {
-background: #555555;
-grid-area: header;
-
-}
-.header-container{
-  display: grid;
-  grid-template-columns: 1fr 2fr 4fr;
-  grid-area: "header-logo . header-menu";
+.mainContent-column__button-load a{
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.header-logo{
-  grid-area: header-logo;
+.mainContent-column__button-load a:hover{
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color:#000000;
 }
 
-.header-menu{
-  grid-area: header-menu;
-}
 
-.header-menu__nav{}
-
-.slider {
-  background: #a04f4f;
-  grid-area: slider;
-}
-
-.content {
-  background: #182383;
-  grid-area: content;
-}
-
-.footer {
-  background: #167a13;
+#pageFooter {
   grid-area: footer;
+}
+
+footer {
+  background-color: #ffffff;
+
+  
+}
+.footer-wrap{
+  flex-direction: column;
+  display: flex;  
+  width:100%;
+  box-shadow: 0 0 10px rgba(194, 194, 194, 0.51); 
+  margin: 0px;
+}
+.footer-menu__logo{
+  display:inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
+  margin-bottom: 45px;
   }
 
+.footer-menu__social-media{
+  display:inline-flex;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+  list-style: none;
+  margin: 0 auto;
+  line-height: 60px;
+  justify-content: center;
+}
+.footer-menu__social-media img{
+  margin-left:20px;
+  margin-right: 20px;
+}
 
-# sourceMappingURL=style.css.map */
+.footer-menu__social-media a:hover{
+  color: #000000;
+}
+
+.footer-menu__copyright{
+  display:inline-flex;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color:#9c9c9c;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100%;
+  }
+
+      
